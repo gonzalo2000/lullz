@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @word.term %>
+</p>
+
+<p>
+  <strong>Translation:</strong>
+  <%= @word.translation %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@word.picture_url, :width => 100) if @word.picture.present? %>
+</p>
+ 
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
